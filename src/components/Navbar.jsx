@@ -28,7 +28,7 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <Link to="/" className="text-[32px] text-[#1A1919] font-extrabold">
+          <Link to="/" className="lg:text-[32px] text-[20px] text-[#1A1919] font-extrabold">
             CareerHub
           </Link>
         </div>
@@ -36,7 +36,9 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
         <div className="navbar-end flex gap-5">
-          <a className="btn">Start Applying</a>
+          <button className="py-[19px] px-[28px] rounded-lg text-white lg:text-[20px] text-[16px] font-extrabold bg-gradient-to-r from-[#7E90FE] to-[#9873FF]">
+            Start Applying
+          </button>
         </div>
       </div>
     </div>
