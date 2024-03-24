@@ -2,9 +2,10 @@
 
 import { CiLocationOn } from "react-icons/ci";
 import { CiDollar } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
 const FeaturedJob = ({ job }) => {
-  const { logo, job_title, company_name, location, job_type, salary, remote_or_onsite } = job;
+  const { id, logo, job_title, company_name, location, job_type, salary, remote_or_onsite } = job;
   return (
     <div className="p-[40px] border-[1px] border-gray-200 rounded-lg">
       <img className="w-[120px] mb-[32px]" src={logo} alt="" />
@@ -28,9 +29,11 @@ const FeaturedJob = ({ job }) => {
           <p className="text-[20px] text-[#757575] font-semibold">{salary}</p>
         </div>
       </div>
-      <button className="py-[11px] px-[18px] rounded text-white lg:text-[20px] text-[16px] font-extrabold bg-gradient-to-r from-[#7E90FE] to-[#9873FF]">
-        View Details
-      </button>
+      <Link to={`/job/${id}`}>
+        <button className="py-[11px] px-[18px] rounded text-white lg:text-[20px] text-[16px] font-extrabold bg-gradient-to-r from-[#7E90FE] to-[#9873FF]">
+          View Details
+        </button>
+      </Link>
     </div>
   );
 };
